@@ -64,13 +64,14 @@ do {
     contador++;
 } while (contador < 0);
 */
+
 //Exercícios
 //1
 const sociedade:string[] = ['Frodo', 'Sam', 'Gandalf', 'Legolas', 'Gimli', 'Merry', 'Pippin', 'Aragorn', 'Boromir'];
 
 for(let i:number = 0; i < sociedade.length; i++) {
   if(i == 0 || i == 1 || i == 5 || i == 6){
-    console.log("Hobbit encontrado: " + sociedade[i])
+    console.log(`Hobbit encontrado:  ${sociedade[i]}`)
   }
 }
 
@@ -84,8 +85,57 @@ const jedi = [
 
   for(const personagem of jedi){
     if(personagem.jedi === true){
-        console.log(`são jedi: ` + personagem.nome)
+        console.log(`Jedi encontrado: ` + personagem.nome)
     }
+}
+
+//3
+const personagens = {
+    Naruto: 'Uzumaki',
+    Sasuke: 'Uchiha',
+    Sakura: 'Haruno',
+    Kakashi: 'Hatake'
+  };
+
+  for(const cla in personagens){
+    console.log(`${cla} pertence ao clã ${personagens[cla as keyof typeof personagens]}`)
   }
 
-  //3
+  //4
+  const perso = [
+    { nome: 'Goku', poder: 15000 },
+    { nome: 'Vegeta', poder: 14999 },
+    { nome: 'Krillin', poder: 7500 },
+    { nome: 'Freeza', poder: 20000 },
+  ];
+
+  perso.forEach((personagem) => {
+    if (personagem.poder > 8000) {
+    console.log(`O poder de ${personagem.nome} é de mais de 8000!`)
+    }
+    })
+
+  //5
+  const pokemons = ['Pikachu', 'Charmander', 'Bulbasaur', 'Mewtwo', 'Squirtle'];
+
+ let contador = 0
+
+ while (contador < pokemons.length){
+  if (pokemons[contador] === `Mewtwo`){
+    console.log(`Pokémon lendário encontrado: Mewtwo!`)
+    break
+  }
+  console.log(`Capaturado ${pokemons[contador]}`)
+  contador++
+ }
+
+ //6
+ let passos = 0 
+ const  passosMordor = 5
+
+ do{
+  console.log(`Dando passo ${passos}`)
+  passos++
+ }while(passos < passosMordor){
+  console.log(`Chegamos em Mordor!`)
+ }
