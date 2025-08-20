@@ -5,7 +5,7 @@ import { Owl } from "./Owl";
 
 const myDog:Dog = new Dog("Bob", 10)
 const myOwl:Owl = new Owl("Nina", 5)
-const myCrocodile:Crocodile = new Crocodile("Alan", 100)
+const myCrocodile:Crocodile = new Crocodile("Alan", 1000)
 /*
 
 console.log(myDog.name)
