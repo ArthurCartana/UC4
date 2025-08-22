@@ -10,6 +10,9 @@ heroi.treinar()*/
 
 const carro:Carro = new Carro(100)
 carro.acelerar()
+carro.acelerar()
+carro.acelerar()
+carro.acelerar()
 
 const meuBanco:ContaPoupanca = new ContaPoupanca(1000)
 

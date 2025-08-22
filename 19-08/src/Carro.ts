@@ -6,7 +6,7 @@ export class Carro extends Veiculo{
     }
 
     acelerar():void{
-    let i = this.velocidade + 10
+    let i = this.velocidade += 10
     console.log(`O carro está acelerando...`)
     console.log(`O carro está a ${i}km`)
     }
