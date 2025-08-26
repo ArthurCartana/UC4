@@ -32,7 +32,7 @@ export class Local{
         this.cidade = novaCidade
     }
 //TELEFONE
-    getTelofone():string{
+    getTelefone():string{
         return this.telefone
     }
     setTelefone(novoTelefone:string):void{

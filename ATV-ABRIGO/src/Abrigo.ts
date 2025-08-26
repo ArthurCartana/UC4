@@ -38,7 +38,7 @@ export class Abrigo extends Local{
         console.log(`Vagas ocupadas: ${qtd}`)
     }
     getVagasDisponiveis():number{
-        let vagas = this.vagasOcupadas - this.capacidade
+        let vagas = this.capacidade - this.vagasOcupadas
         return vagas
     }
 }

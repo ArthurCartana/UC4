@@ -1,11 +1,8 @@
 import * as readline from 'readline-sync'
 import { SistemaAbrigo } from './SistemaAbrigo'
-import { Abrigo } from './Abrigo'
 
 
-
-const cadastro:SistemaAbrigo = new SistemaAbrigo([])
-const procurar:SistemaAbrigo = new SistemaAbrigo([])
+const sistema:SistemaAbrigo = new SistemaAbrigo()
 
 
 let opcao = ""
@@ -19,12 +16,13 @@ do{
 
     switch(opcao){
         case "1":
-        cadastro.cadastrarAbrigo()
+            sistema.cadastrarAbrigo()
         break
         case "2":
-   
+            sistema.listarAbrigos()
+        break
         case "3":
-        console.log(procurar.procurarAbrigos())
+            sistema.procurarAbrigos()
         break
         case "4":
         console.log("Saindo...")
