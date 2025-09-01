@@ -1,3 +1,3 @@
 export interface IAutenticavel {
-    autenticar(usuaario:string, senha:string): boolean
+    autenticar(usuario:string, senha:string): boolean
 }

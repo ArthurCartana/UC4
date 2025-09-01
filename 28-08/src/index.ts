@@ -5,6 +5,7 @@ import { ILivro } from "./ILivro";
 import { IProduto } from "./IProduto";
 import { IUsuario } from "./IUsuario";
 import { Quadrado } from "./Quadrado";
+import { SistemaLogin } from "./SistemaLogin";
 
 //Aqui criamos um objeto do tipo IUsuario, ou seja, um objeto que SEGUE AS REGRAS da interface que criamos
 const meuUser:IUsuario = {
@@ -59,3 +60,6 @@ const meuQuadrado:Quadrado = new Quadrado(2,4)
 const meuCirculo:Circulo = new Circulo(5)
 console.log(meuCirculo.calcularArea())
 console.log(meuQuadrado.calcularArea())
+
+const meuLogin:SistemaLogin = new SistemaLogin()
+console.log(meuLogin.autenticar("admin", "1234"))
