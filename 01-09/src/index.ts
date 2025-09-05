@@ -5,6 +5,10 @@ import { FuncionarioCLT } from "./FuncionarioCLT";
 import { FuncionarioPJ } from "./FuncionarioPJ";
 import { Retangulo } from "./Retangulo";
 import { Triangulo } from "./Triangulo";
+import { ClaAkimichi } from "./ClaAkimichi";
+import { ClaHyuuga } from "./ClaHyuuga";
+import { ClaNara } from "./ClaNara";
+import { ClaUchiha } from "./ClaUchiha";
 
 const funcionarioCLT:FuncionarioCLT = new FuncionarioCLT("Bob", 2000)
 const funcionarioPJ:FuncionarioPJ = new FuncionarioPJ("Xablau", 5000, 220)
@@ -30,3 +34,11 @@ if(cliente.autenticar("arthursci", "1234")) {
 } else {
     console.log("Falha na autenticação do cliente")
 }
+
+
+const personagemUchiha:ClaUchiha = new ClaUchiha("Uchiha", "Sasuke")
+const personagemHyuuga:ClaHyuuga = new ClaHyuuga("Hyuuga", "Hiashi")
+const personagemNara:ClaNara = new ClaNara("Nara", "Shikamaru")
+const personagemAkimichi:ClaAkimichi = new ClaAkimichi("Akimichi", "Chouza")
+personagemUchiha.habilidadeEspecial()
+personagemHyuuga.ataqueEspecial()
