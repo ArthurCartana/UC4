@@ -1,6 +1,6 @@
 /* 
 Questões Objetivas:
-1- A
+1- D
 2- C
 3- C
 4- B
@@ -12,7 +12,9 @@ Questões Objetivas:
 
 Questões de Interpretação de Código:
 1- ERRO, pois o nome é privado. Ele deveria colocar "person.getNome" dentro do console.log.
-2- Vai dar erro de novo ,pois não está tipando o método, seria "void".
+2- golden.makeSound(); = Woof!
+    golden.displayInfo(); = This dog is a Golden Retriever breed.
+    golden.fetch(); = Fetching....
 3- Haverá erro, pois a classe "Square" não extende Shape.
 4- Haverá erro, pois está sendo passado dois parâmetros em "result", sendo que no método "add" é requisitado somente um parâmetro.
 */
