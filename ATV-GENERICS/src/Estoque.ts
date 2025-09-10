@@ -6,6 +6,9 @@ export class Estoque<T> {
     }
 
     listar(): T[]{
+        if(this.itens.length === 0) {
+
+            console.log("Nenhum abrigo cadastrado.")}
         return this.itens
     }
 
@@ -15,8 +18,8 @@ export class Estoque<T> {
         }
     }
 
-    buscar(condicao: (item:T) => boolean): T[] {
-        return 
+    buscar(condicao: (item:T) => boolean):T[] {
+        return this.itens.filter(condicao)
 
     }
 }
