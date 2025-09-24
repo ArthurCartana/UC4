@@ -26,8 +26,8 @@ console.log(pedido1.descricao())*/
 
 
 let opcao = ""
-let sabor = ""
-let tamanho = ""
+let sabor = 0
+let tamanho = 0
 do {
    console.log("===== BEM VINDO A PIZZARIA =====")
    console.log("1.Fazer pedido")
@@ -54,22 +54,21 @@ do {
 
 function mostrarTamanho(TamPizza:any) {
    console.log("=== TAMANHOS DE PIZZA ===")
-   console.log("DIGITE COMO ESTÁ NO CARDÁPIO!")
    Object.values(TamPizza).forEach((tamanho, index) => {
       console.log(`${index + 1}, ${tamanho}`)
    })
-   tamanho = readline.question("Escolha um sabor: ")
+   tamanho = readline.questionInt("Escolha um sabor: ")
 
-   if (tamanho == "Pequena") {
+   if (tamanho == 1) {
       return tamanho = TamPizza.Pequena
    }
-   if (tamanho == "Media") {
+   if (tamanho == 2) {
       return tamanho = TamPizza.Media
    }
-   if (tamanho == "Grande") {
+   if (tamanho == 3) {
       return tamanho = TamPizza.Grande
    }
-   if (tamanho == "Familia") {
+   if (tamanho == 4) {
       return tamanho = TamPizza.Familia
    }
 }
@@ -77,25 +76,24 @@ function mostrarTamanho(TamPizza:any) {
 
 function mostrarSabor(SaborPizza:any) {
    console.log("=== SABORES DE PIZZA ===")
-   console.log("DIGITE COMO ESTÁ NO CARDÁPIO!")
    Object.values(SaborPizza).forEach((sabor, index) => {
       console.log(`${index + 1}, ${sabor}`)
    })
-   sabor = readline.question("Escolha um sabor: ")
+   sabor = readline.questionInt("Escolha um sabor: ")
 
-   if (sabor == "Calabresa") {
+   if (sabor == 1) {
       return sabor = SaborPizza.Calabresa
    }
-   if (sabor == "Coracao") {
+   if (sabor == 2) {
       return sabor = SaborPizza.Coracao
    }
-   if (sabor == "Frango") {
+   if (sabor == 3) {
       return sabor = SaborPizza.Frango
    }
-   if (sabor == "Quatro queijos") {
+   if (sabor == 4) {
       return sabor = SaborPizza.QuatroQueijos
    }
-   if (sabor == "Strogonoff") {
+   if (sabor == 5) {
       return sabor = SaborPizza.Strogonoff
    }
 }
