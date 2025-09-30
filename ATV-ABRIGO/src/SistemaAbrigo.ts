@@ -33,7 +33,7 @@ LISTAGEM DE ABRIGOS:
 CÓDIGO|NOME|ENDEREÇO|CIDADE|TELEFONE|CAPACIDADE|VAGAS OCUPADAS|VAGAS DISPONÍVEIS|`)
 
         this.abrigos.forEach((abrigo, index) => {
-            
+
             console.log(
                 `---------------------------------------------------------------------------------
 ${index + 1} | ${abrigo.getNome()} | ${abrigo.getEndereco()} | ${abrigo.getCidade()} | ${abrigo.getTelefone()} | ${abrigo.getCapacidade()} | ${abrigo.getVagasOcupadas()} | ${abrigo.getVagasDisponiveis()} |
@@ -41,26 +41,27 @@ ${index + 1} | ${abrigo.getNome()} | ${abrigo.getEndereco()} | ${abrigo.getCidad
         })
     }
     //funçao para procurar abrigos por cidades
-   procurarAbrigos(): void {
-    const pergunta = readline.question("Digite a cidade que você está: ")
-    let encontrou:boolean = false
-    console.log(`
+    procurarAbrigos(): void {
+        const pergunta = readline.question("Digite a cidade que você está: ")
+        let encontrou: boolean = false
+        console.log(`
 --------------------
  ABRIGOS NA CIDADE:
 --------------------
 CÓDIGO | NOME | ENDEREÇO | TELEFONE | CAPACIDADE | CIDADE |
 `)
 
-    for (let i = 0; i < this.abrigos.length; i++) {
-        if (pergunta.toLowerCase() === this.abrigos[i].getCidade().toLowerCase()) {
-            encontrou = true
-            console.log(`------------------------------------------------
+        for (let i = 0; i < this.abrigos.length; i++) {
+            if (pergunta.toLowerCase() === this.abrigos[i].getCidade().toLowerCase()) {
+                encontrou = true
+                console.log(`------------------------------------------------
 ${i + 1} | ${this.abrigos[i].getNome()} | ${this.abrigos[i].getEndereco()} | ${this.abrigos[i].getTelefone()} | ${this.abrigos[i].getCapacidade()} | ${this.abrigos[i].getCidade()}
 ------------------------------------------------`)
+            }
+        }
+
+        if (!encontrou) {
+            console.log("Cidade não encontrada")
         }
     }
-
-    if (!encontrou) {
-        console.log("Cidade não encontrada")
-    }
-}}
+}
